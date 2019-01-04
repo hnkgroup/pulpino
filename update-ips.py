@@ -21,6 +21,8 @@ def execute_out(cmd, silent=False):
     return out
 
 def find_server():
+    return ['https://github.com', 'pulp-platform', 'https://github.com/pulp-platform']
+    """
     stdout = execute_out("git remote -v")
 
     stdout = stdout.split('\n')
@@ -52,6 +54,8 @@ def find_server():
 
     print tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC
     sys.exit(1)
+    """
+
 
 if len(sys.argv) > 1:
     server = sys.argv[1]
